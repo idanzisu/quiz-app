@@ -74,17 +74,17 @@ export default function App() {
         <SafeAreaView style={{ alignItems: 'center' }} className='app'>
             {showScore ? (
                 <View className='score-section'>
-                    <Text style={{ fontSize: 20, padding: "10px", textAlign: 'center' }}>
+                    <Text style={{ fontSize: 20, padding: 10, textAlign: 'center' }}>
                         You scored {score} out of {questions.length}</Text>
                 </View>
             ) : (
                     <>
                         <View className='question-section'>
                             <View className='question-count'>
-                                <Text style={{ fontSize: 20, padding: "10px", textAlign: 'center' }}>Question {currentQuestion + 1}/{questions.length}</Text>
+                                <Text style={{ fontSize: 20, padding: 10, textAlign: 'center' }}>Question {currentQuestion + 1}/{questions.length}</Text>
                             </View>
                             <View className='question-text'>
-                                <Text style={{ fontSize: 35, padding: "10px", textAlign: 'center' }}>
+                                <Text style={{ fontSize: 35, padding: 10, textAlign: 'center' }}>
                                     {questions[currentQuestion].questionText}</Text>
                             </View>
                         </View>
@@ -93,7 +93,7 @@ export default function App() {
                             {questions[currentQuestion].answerOptions.map((answerOption) => (
                                 <Text>
                                     <Button
-                                        style={{ fontSize: 15, padding: "10px", textAlign: 'center' }}
+                                        style={{ fontSize: 15, padding: 10, textAlign: 'center' }}
                                         title={answerOption.answerText}
                                         onPress={() => { handleAnswerOptionClick(answerOption.isCorrect) }}>
                                     </Button>
